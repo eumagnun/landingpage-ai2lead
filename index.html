@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI2Lead - Geração de Leads para o Mercado Imobiliário com IA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        // Configuração customizada do Tailwind para adicionar as cores da marca
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0052cc',
+                        'brand-green': '#52c41a',
+                        'brand-dark': '#212529',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Pequenos ajustes para animações e suavização */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navegação -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#">
+                    <img src="https://i.imgur.com/GjTw34j.png" alt="AI2Lead Logo" class="h-10" onerror="this.onerror=null;this.src='https://placehold.co/150x40/0052cc/ffffff?text=AI2Lead';">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-brand-blue transition">Recursos</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-brand-blue transition">Depoimentos</a>
+                    <a href="#contact" class="text-gray-600 hover:text-brand-blue transition">Contato</a>
+                    <a href="mailto:contato@ai2lead.tech" class="bg-brand-blue text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow">Entre em Contato</a>
+                </div>
+                <!-- Menu Mobile (opcional, pode ser implementado com um pouco de JS) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <header class="bg-white">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark leading-tight">
+                        Encontre os Melhores Leads para sua Imobiliária com IA
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
+                        Nossa plataforma encontra e qualifica compradores e vendedores de imóveis, permitindo que você foque no que realmente importa: fechar negócios.
+                    </p>
+                    <a href="mailto:contato@ai2lead.tech" class="mt-8 inline-block bg-brand-blue text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+                        Solicite uma Demonstração
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Ilustração Hero -->
+                    <div class="w-full max-w-md mx-auto">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path class="fill-blue-100" d="M100,20 L180,100 v80 H20 v-80 Z" />
+                                <path class="stroke-brand-blue" stroke-width="4" fill="none" d="M100,20 L180,100 v80 H20 v-80 Z" />
+                                <rect x="85" y="130" width="30" height="50" class="fill-white stroke-brand-blue" stroke-width="4"/>
+                                <path class="stroke-brand-green" stroke-width="5" stroke-linecap="round" fill="none" d="M40,150 Q80,110 120,130 T160,90" />
+                                <circle cx="40" cy="150" r="6" class="fill-brand-green" />
+                                <circle cx="120" cy="130" r="6" class="fill-brand-green" />
+                                <circle cx="160" cy="90" r="6" class="fill-brand-green" />
+                                <circle cx="100" cy="60" r="10" class="fill-white stroke-brand-blue" stroke-width="4"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Recursos -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark">A Ferramenta Certa para o Mercado Imobiliário</h2>
+                <p class="mt-4 text-lg text-gray-600">Recursos pensados para acelerar suas vendas.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-24 w-24 mx-auto mb-4">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M50.7 49.3l-9-9a20 20 0 10-1.4 1.4l9 9a1 1 0 001.4-1.4zM24 40a16 16 0 1116-16 16 16 0 01-16 16z" fill="#0052cc"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark text-center">Leads de Compradores</h3>
+                    <p class="mt-2 text-gray-600 text-center">Identifique potenciais compradores com base em perfis de consumo e comportamento online.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-24 w-24 mx-auto mb-4">
+                       <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 2a30 30 0 1030 30A30 30 0 0032 2zm-2 45l-13-13 3-3 10 10 20-20 3 3z" fill="#0052cc"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark text-center">Qualificação Automática</h3>
+                    <p class="mt-2 text-gray-600 text-center">Filtre e pontue leads por orçamento, localização e urgência, entregando os mais promissores.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-24 w-24 mx-auto mb-4">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="#0052cc"><path d="M10 2h12v60H10zM28 2h12v60H28zM46 2h12v60H46z"/></g></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark text-center">Gestão de Clientes</h3>
+                    <p class="mt-2 text-gray-600 text-center">Um funil de vendas visual para acompanhar cada cliente, do contato à assinatura do contrato.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-24 w-24 mx-auto mb-4">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M2 58h60v4H2zM10 48h8v6h-8zM22 38h8v16h-8zM34 24h8v30h-8zM46 14h8v40h-8z" fill="#0052cc"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark text-center">Análise de Mercado</h3>
+                    <p class="mt-2 text-gray-600 text-center">Obtenha insights sobre os imóveis mais procurados e o desempenho dos seus corretores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark">O que os Corretores Dizem</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <p class="text-gray-700">"Com a AI2Lead, nosso tempo de prospecção diminuiu em 50%. Agora focamos em apresentar os imóveis certos para os clientes certos. Nossas vendas aumentaram 35% no último trimestre!"</p>
+                    <div class="mt-4">
+                        <p class="font-bold text-brand-dark">Juliana Costa</p>
+                        <p class="text-sm text-gray-500">Corretora de Imóveis, Imóvel Certo</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <p class="text-gray-700">"A capacidade de qualificar leads automaticamente mudou o jogo para nossa imobiliária. A equipe está mais motivada e produtiva, atendendo clientes com real potencial de compra."</p>
+                    <div class="mt-4">
+                        <p class="font-bold text-brand-dark">Ricardo Mendes</p>
+                        <p class="text-sm text-gray-500">Diretor, Mendes Imóveis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de CTA (Call to Action) -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bg-brand-blue text-white text-center p-12 rounded-2xl shadow-2xl max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold">Pronto para vender mais imóveis?</h2>
+                <p class="mt-4 text-lg text-blue-100">Junte-se a imobiliárias e corretores que estão revolucionando seus resultados com a AI2Lead.</p>
+                <a href="mailto:contato@ai2lead.tech" class="mt-8 inline-block bg-white text-brand-blue font-bold text-lg px-8 py-4 rounded-lg hover:bg-gray-100 transition">
+                    Fale com um especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-brand-dark text-gray-400">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <img src="https://i.imgur.com/GjTw34j.png" alt="AI2Lead Logo" class="h-9 mb-4" onerror="this.onerror=null;this.src='https://placehold.co/150x35/ffffff/212529?text=AI2Lead';">
+                    <p class="max-w-md">Inteligência Artificial a serviço do seu crescimento no mercado imobiliário.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white tracking-wider">Links</h5>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#features" class="hover:text-white transition">Recursos</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition">Depoimentos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Preços</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white tracking-wider">Legal</h5>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-white transition">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm">
+                <p>&copy; 2025 AI2Lead. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
