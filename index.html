@@ -35,6 +35,17 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Classe inicial para os elementos animados */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        /* Classe adicionada quando o elemento está visível */
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -63,23 +74,23 @@
     </nav>
 
     <!-- Seção Hero -->
-    <header class="bg-white">
+    <header class="bg-white overflow-hidden">
         <div class="container mx-auto px-6 py-16 md:py-24">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark leading-tight">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark leading-tight animate-on-scroll">
                         Encontre os Melhores Leads para sua Imobiliária com IA
                     </h1>
-                    <p class="mt-6 text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
+                    <p class="mt-6 text-lg text-gray-600 max-w-lg mx-auto md:mx-0 animate-on-scroll" style="transition-delay: 200ms;">
                         Nossa plataforma encontra e qualifica compradores e vendedores de imóveis, permitindo que você foque no que realmente importa: fechar negócios.
                     </p>
-                    <a href="mailto:contato@ai2lead.tech" class="mt-8 inline-block bg-brand-blue text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+                    <a href="mailto:contato@ai2lead.tech" class="mt-8 inline-block bg-brand-blue text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg animate-on-scroll" style="transition-delay: 400ms;">
                         Solicite uma Demonstração
                     </a>
                 </div>
                 <div class="md:w-1/2">
                     <!-- Ilustração Hero -->
-                    <div class="w-full max-w-md mx-auto">
+                    <div class="w-full max-w-md mx-auto animate-on-scroll" style="transition-delay: 300ms;">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path class="fill-blue-100" d="M100,20 L180,100 v80 H20 v-80 Z" />
@@ -102,12 +113,12 @@
     <section id="features" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark">A Ferramenta Certa para o Mercado Imobiliário</h2>
-                <p class="mt-4 text-lg text-gray-600">Recursos pensados para acelerar suas vendas.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark animate-on-scroll">A Ferramenta Certa para o Mercado Imobiliário</h2>
+                <p class="mt-4 text-lg text-gray-600 animate-on-scroll" style="transition-delay: 200ms;">Recursos pensados para acelerar suas vendas.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
                     <div class="h-24 w-24 mx-auto mb-4">
                         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M50.7 49.3l-9-9a20 20 0 10-1.4 1.4l9 9a1 1 0 001.4-1.4zM24 40a16 16 0 1116-16 16 16 0 01-16 16z" fill="#0052cc"/></svg>
                     </div>
@@ -115,7 +126,7 @@
                     <p class="mt-2 text-gray-600 text-center">Identifique potenciais compradores com base em perfis de consumo e comportamento online.</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll" style="transition-delay: 150ms;">
                     <div class="h-24 w-24 mx-auto mb-4">
                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 2a30 30 0 1030 30A30 30 0 0032 2zm-2 45l-13-13 3-3 10 10 20-20 3 3z" fill="#0052cc"/></svg>
                     </div>
@@ -123,7 +134,7 @@
                     <p class="mt-2 text-gray-600 text-center">Filtre e pontue leads por orçamento, localização e urgência, entregando os mais promissores.</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll" style="transition-delay: 300ms;">
                     <div class="h-24 w-24 mx-auto mb-4">
                         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="#0052cc"><path d="M10 2h12v60H10zM28 2h12v60H28zM46 2h12v60H46z"/></g></svg>
                     </div>
@@ -131,7 +142,7 @@
                     <p class="mt-2 text-gray-600 text-center">Um funil de vendas visual para acompanhar cada cliente, do contato à assinatura do contrato.</p>
                 </div>
                 <!-- Card 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll" style="transition-delay: 450ms;">
                     <div class="h-24 w-24 mx-auto mb-4">
                         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M2 58h60v4H2zM10 48h8v6h-8zM22 38h8v16h-8zM34 24h8v30h-8zM46 14h8v40h-8z" fill="#0052cc"/></svg>
                     </div>
@@ -146,17 +157,17 @@
     <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark">O que os Corretores Dizem</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark animate-on-scroll">O que os Corretores Dizem</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 animate-on-scroll">
                     <p class="text-gray-700">"Com a AI2Lead, nosso tempo de prospecção diminuiu em 50%. Agora focamos em apresentar os imóveis certos para os clientes certos. Nossas vendas aumentaram 35% no último trimestre!"</p>
                     <div class="mt-4">
                         <p class="font-bold text-brand-dark">Juliana Costa</p>
                         <p class="text-sm text-gray-500">Corretora de Imóveis, Imóvel Certo</p>
                     </div>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 animate-on-scroll" style="transition-delay: 200ms;">
                     <p class="text-gray-700">"A capacidade de qualificar leads automaticamente mudou o jogo para nossa imobiliária. A equipe está mais motivada e produtiva, atendendo clientes com real potencial de compra."</p>
                     <div class="mt-4">
                         <p class="font-bold text-brand-dark">Ricardo Mendes</p>
@@ -170,7 +181,7 @@
     <!-- Seção de CTA (Call to Action) -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
-            <div class="bg-brand-blue text-white text-center p-12 rounded-2xl shadow-2xl max-w-4xl mx-auto">
+            <div class="bg-brand-blue text-white text-center p-12 rounded-2xl shadow-2xl max-w-4xl mx-auto animate-on-scroll">
                 <h2 class="text-3xl md:text-4xl font-extrabold">Pronto para vender mais imóveis?</h2>
                 <p class="mt-4 text-lg text-blue-100">Junte-se a imobiliárias e corretores que estão revolucionando seus resultados com a AI2Lead.</p>
                 <a href="mailto:contato@ai2lead.tech" class="mt-8 inline-block bg-white text-brand-blue font-bold text-lg px-8 py-4 rounded-lg hover:bg-gray-100 transition">
@@ -210,5 +221,27 @@
         </div>
     </footer>
 
+    <script>
+        // Lógica para as animações de scroll
+        document.addEventListener("DOMContentLoaded", () => {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Opcional: parar de observar depois que a animação acontece
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1 // A animação começa quando 10% do elemento está visível
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
